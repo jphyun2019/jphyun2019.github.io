@@ -72,7 +72,11 @@ h1, h2, h3 { margin: 0; }
   gap: 24px;
 }
 .identity { display: flex; flex-direction: column; gap: 18px; }
+.headshot-wrap { position: relative; display: block; width: 120px; height: 120px; }
 .headshot { width: 120px; height: 120px; border-radius: 16px; object-fit: cover; }
+.headshot-alt { position: absolute; inset: 0; opacity: 0; transition: opacity 0.25s ease; }
+.headshot-wrap:hover .headshot-alt { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .headshot-alt { transition: none; } }
 .identity-text { display: flex; flex-direction: column; gap: 6px; }
 .name { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
 .affil { font-size: 14px; color: var(--muted); line-height: 1.45; }
@@ -139,6 +143,19 @@ h1, h2, h3 { margin: 0; }
 .btn-primary:hover { background: #0a2f8a; border-color: #0a2f8a; color: #ffffff; }
 .cta-row .btn { padding: 9px 14px; font-size: 13.5px; }
 .cta-row .btn-primary { padding: 9px 16px; }
+
+/* Click-to-play video poster */
+.yt { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; }
+.yt img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.yt:hover img { transform: scale(1.02); }
+.yt-badge {
+  position: absolute; left: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px; border-radius: 999px; background: rgba(12, 16, 28, 0.78); color: #ffffff;
+  font-size: 12px; font-weight: 600; backdrop-filter: blur(4px);
+}
+.yt:hover .yt-badge { background: var(--accent); }
+.yt-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px; display: block; background: #000; }
+@media (prefers-reduced-motion: reduce) { .yt img { transition: none; } .yt:hover img { transform: none; } }
 
 /* Featured system */
 .section-note { font-family: var(--mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; }
@@ -265,7 +282,9 @@ h1, h2, h3 { margin: 0; }
     padding: 28px 20px 20px; gap: 16px;
   }
   .identity { flex-direction: row; align-items: center; gap: 16px; }
-  .headshot { width: 76px; height: 76px; border-radius: 12px; flex: none; }
+  .headshot-wrap, .headshot { width: 76px; height: 76px; }
+  .headshot { border-radius: 12px; }
+  .headshot-wrap { flex: none; }
   .identity-text { gap: 4px; }
   .name { font-size: 22px; }
   .affil, .tagline { font-size: 13px; }

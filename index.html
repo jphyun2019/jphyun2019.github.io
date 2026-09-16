@@ -24,7 +24,10 @@
 
   <aside class="sidebar">
     <div class="identity">
-      <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Jonathan Hyun" width="120" height="120">
+      <span class="headshot-wrap">
+        <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Jonathan Hyun" width="120" height="120">
+        <img class="headshot headshot-alt" src="assets/headshot-alt.jpg" alt="" aria-hidden="true" width="120" height="120" loading="lazy">
+      </span>
       <div class="identity-text">
         <h1 class="name">Jonathan Hyun</h1>
         <p class="tagline">Agentic AI &middot; Multi-agent systems &middot; Robot learning</p>
@@ -101,7 +104,10 @@
           </div>
         </div>
         <div class="feature-media">
-          <img src="assets/crew-wildfire-hero.jpg" alt="CREW-WILDFIRE: LLM agents coordinating over a wildfire, with speech bubbles such as Agent 10: Fire spotted and Agent 5: Searching for survivors" width="1400" height="787" loading="lazy">
+          <a class="yt" href="https://www.youtube.com/watch?v=IspKVw3mfFg" data-yt="IspKVw3mfFg" aria-label="Play video: CREW-Wildfire: Benchmarking Agentic Multi-Agent Collaborations at Scale">
+            <img src="assets/crew-wildfire-hero.jpg" alt="CREW-WILDFIRE: LLM agents coordinating over a wildfire, with speech bubbles such as Agent 10: Fire spotted and Agent 5: Searching for survivors" width="1400" height="787" loading="lazy">
+            <span class="yt-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Watch the paper video</span>
+          </a>
           <video class="feature-video" src="assets/orch-demo.mp4" poster="assets/orch-demo-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="320" aria-label="ORCH agents fighting a wildfire in CREW-WILDFIRE, with each agent's camera view"></video>
           <img src="assets/wild-teaming.jpg" alt="WILDFIRE-ORCH web app: agent camera views, the team hierarchy, and chat with the manager agent" width="1000" height="547" loading="lazy">
         </div>
@@ -118,6 +124,7 @@
               <a class="pill" href="https://arxiv.org/abs/2507.05178">arXiv</a>
               <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
               <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Code</a>
+              <a class="pill" href="https://www.youtube.com/watch?v=IspKVw3mfFg">Video</a>
             </div>
           </li>
           <li class="pub-row">
@@ -129,6 +136,7 @@
               <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
               <a class="pill" href="https://generalroboticslab.com/ORCH">Project page</a>
               <a class="pill" href="https://github.com/generalroboticslab/ORCH">Code</a>
+              <a class="pill" href="https://www.youtube.com/watch?v=M7MvJTFMfOA">Video</a>
             </div>
           </li>
         </ul>
@@ -263,6 +271,20 @@
     }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 });
     ids.forEach(function (id) { var el = document.getElementById(id); if (el) observer.observe(el); });
   })();
+
+  // Click-to-play YouTube: swap the poster for the embedded player. Without JS the link opens YouTube.
+  document.querySelectorAll('.yt[data-yt]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.yt + '?autoplay=1&rel=0';
+      f.title = a.getAttribute('aria-label') || 'Video';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.setAttribute('allowfullscreen', '');
+      f.className = 'yt-frame';
+      a.replaceWith(f);
+    });
+  });
 </script>
 </body>
 </html>
