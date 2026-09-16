@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jonathan P. Hyun</title>
+  <title>Jonathan Hyun</title>
   <meta name="description" content="I build agentic AI systems that scale to thousands of LLM agents. CS and Math senior at Duke University and researcher at the Duke General Robotics Lab; creator of CREW-WILDFIRE (TMLR 2025).">
-  <meta name="author" content="Jonathan P. Hyun">
+  <meta name="author" content="Jonathan Hyun">
   <link rel="canonical" href="https://jphyun2019.github.io/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Jonathan P. Hyun">
+  <meta property="og:title" content="Jonathan Hyun">
   <meta property="og:description" content="I build agentic AI systems that scale to thousands of LLM agents. CS + Math at Duke University; Duke General Robotics Lab.">
   <meta property="og:url" content="https://jphyun2019.github.io/">
   <meta property="og:image" content="https://jphyun2019.github.io/assets/crew-wildfire-teaser.jpg">
@@ -24,9 +24,9 @@
 
   <aside class="sidebar">
     <div class="identity">
-      <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Jonathan P. Hyun" width="120" height="120">
+      <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Jonathan Hyun" width="120" height="120">
       <div class="identity-text">
-        <h1 class="name">Jonathan P. Hyun</h1>
+        <h1 class="name">Jonathan Hyun</h1>
         <p class="tagline">Agentic AI &middot; Multi-agent systems &middot; Robot learning</p>
         <p class="affil">CS &amp; Math, Duke University &rsquo;27<br>General Robotics Lab</p>
       </div>
@@ -56,7 +56,6 @@
     <nav class="section-nav" aria-label="Sections">
       <a class="nav-link" href="#bio">About</a>
       <a class="nav-link" href="#wildfire">CREW-WILDFIRE</a>
-      <a class="nav-link" href="#publications">Publications</a>
       <a class="nav-link" href="#tiamat">TIAMAT Scene Graphs</a>
       <a class="nav-link" href="#projects">More projects</a>
       <a class="nav-link" href="#news">News</a>
@@ -67,7 +66,7 @@
   <main class="content">
 
     <section class="hero" id="bio" aria-labelledby="hero-h">
-      <p class="eyebrow">Jonathan P. Hyun &middot; Duke University &middot; General Robotics Lab</p>
+      <p class="eyebrow">Jonathan Hyun &middot; Duke University &middot; General Robotics Lab</p>
       <h2 id="hero-h" class="hero-title">I build agentic AI systems that scale to thousands of LLM agents, and ship them as real products.</h2>
       <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live web app where humans and AI agents fight fires together. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
       <div class="cta-row">
@@ -82,11 +81,11 @@
       <div class="feature">
         <div class="feature-body">
           <h3 class="feature-title">A large-scale multi-agent system for LLM agents, from simulator to deployed product</h3>
-          <p class="feature-lede">Procedurally generated wildfire-response worlds where up to 2,000+ heterogeneous LLM agents and human players scout, contain fires, and rescue civilians together. First-author paper in TMLR 2025; playable today at <a href="https://crew-wildfire.com">crew-wildfire.com</a>.</p>
+          <p class="feature-lede">Procedurally generated wildfire worlds where up to 2,000+ LLM agents and human players scout, contain fires, and rescue civilians together. Playable at <a href="https://crew-wildfire.com">crew-wildfire.com</a>.</p>
           <ul class="feature-points">
-            <li><strong>Environment &amp; infrastructure.</strong> Unity simulation on distributed Docker server/client containers with gRPC, scaling from a handful of agents to 2,000+.</li>
-            <li><strong>Benchmark.</strong> Five state-of-the-art multi-LLM agentic algorithms evaluated across large maps, partial observability, and stochastic dynamics. Extended by ORCH, which adds organizational structure to the agents.</li>
-            <li><strong>WILDFIRE-ORCH app.</strong> Multiplayer web app where humans team with ORCH agents: React front end, real-time WebSockets, Dockerized microservices on AWS, OpenAI or self-hosted vLLM models.</li>
+            <li><strong>Environment &amp; infrastructure.</strong> Unity simulation on distributed Docker and gRPC, from a handful of agents to 2,000+.</li>
+            <li><strong>Benchmark.</strong> Five multi-LLM agentic algorithms under partial observability and stochastic dynamics; extended by ORCH.</li>
+            <li><strong>WILDFIRE-ORCH app.</strong> Humans team with ORCH agents in the browser: React, WebSockets, AWS microservices, OpenAI or self-hosted vLLM.</li>
           </ul>
           <ul class="stat-row">
             <li><span class="stat-num">2,000+</span><span class="stat-label">LLM agents per run</span></li>
@@ -107,44 +106,33 @@
           <img src="assets/wild-teaming.jpg" alt="WILDFIRE-ORCH web app: agent camera views, the team hierarchy, and chat with the manager agent" width="1000" height="547" loading="lazy">
         </div>
       </div>
-    </section>
-
-    <section class="section" id="publications" aria-labelledby="pubs-h">
-      <div class="section-head"><h2 id="pubs-h">Publications</h2><div class="rule"></div><a class="aside-link" href="https://scholar.google.com/citations?user=LM4zoDwAAAAJ&amp;hl=en">Google Scholar</a></div>
-      <ul class="pub-list compact">
-        <li class="pub-row">
-          <div class="pub-main">
-            <a class="pub-title" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
-            <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">arXiv, Sep 2026</span></p>
-          </div>
-          <div class="pill-row">
-            <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
-            <a class="pill" href="https://generalroboticslab.com/ORCH">Project page</a>
-            <a class="pill" href="https://github.com/generalroboticslab/ORCH">Code</a>
-          </div>
-        </li>
-        <li class="pub-row">
-          <div class="pub-main">
-            <a class="pub-title" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration: Online Dynamic Scene Graphs for Frontier-Based Exploration</a>
-            <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, DARPA TIAMAT challenge, 2025</span> <span class="venue-badge badge-outline">First author</span></p>
-          </div>
-          <div class="pill-row">
-            <a class="pill" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">PDF</a>
-            <a class="pill" href="#tiamat">Featured above</a>
-          </div>
-        </li>
-        <li class="pub-row">
-          <div class="pub-main">
-            <a class="pub-title" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
-            <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span> <span class="venue-badge badge-outline">First author</span></p>
-          </div>
-          <div class="pill-row">
-            <a class="pill" href="https://arxiv.org/abs/2507.05178">arXiv</a>
-            <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
-            <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Code</a>
-          </div>
-        </li>
-      </ul>
+      <div class="papers">
+        <div class="papers-head"><span class="papers-label">Papers</span><a class="aside-link" href="https://scholar.google.com/citations?user=LM4zoDwAAAAJ&amp;hl=en">Google Scholar</a></div>
+        <ul class="pub-list compact">
+          <li class="pub-row">
+            <div class="pub-main">
+              <a class="pub-title" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
+              <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span> <span class="venue-badge badge-outline">First author</span></p>
+            </div>
+            <div class="pill-row">
+              <a class="pill" href="https://arxiv.org/abs/2507.05178">arXiv</a>
+              <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
+              <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Code</a>
+            </div>
+          </li>
+          <li class="pub-row">
+            <div class="pub-main">
+              <a class="pub-title" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
+              <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">arXiv, Sep 2026</span></p>
+            </div>
+            <div class="pill-row">
+              <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
+              <a class="pill" href="https://generalroboticslab.com/ORCH">Project page</a>
+              <a class="pill" href="https://github.com/generalroboticslab/ORCH">Code</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="section" id="tiamat" aria-labelledby="tiamat-h">
@@ -158,17 +146,39 @@
             <li><strong>Task-driven exploration.</strong> A task parser turns instructions like "find shelter from the rain" into object queries; an LLM frontier selector reasons over the partial graph to choose where to go.</li>
             <li><strong>Sim to real.</strong> Developed across Habitat, MuJoCo, and Isaac Sim, then deployed on Spot through ROS 2.</li>
           </ul>
-          <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, 2025</span></p>
           <ul class="tags"><li class="tag">ROS 2</li><li class="tag">Isaac Sim</li><li class="tag">OWLv2</li><li class="tag">LLM planning</li><li class="tag">C++</li><li class="tag">Python</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
-            <a class="btn" href="https://arxiv.org/abs/2503.11007">DARPA TIAMAT overview</a>
+            <a class="btn" href="https://arxiv.org/abs/2503.11007">DARPA program overview</a>
           </div>
         </div>
         <div class="feature-media">
           <img src="assets/tiamat-pipeline.jpg" alt="Pipeline figure: RGB-D input through OWLv2 detection and DBSCAN clustering into 3D boxes, aggregated into a dynamic scene graph that feeds an LLM frontier selector and Spot's locomotion policy" width="1400" height="790" loading="lazy">
           <img src="assets/tiamat-scenegraph.jpg" alt="Dynamic scene graph: labeled 3D bounding boxes for armchair, bedframe, slippers, heater, and other objects" width="800" height="569" loading="lazy">
         </div>
+      </div>
+      <div class="papers">
+        <div class="papers-head"><span class="papers-label">Papers</span></div>
+        <ul class="pub-list compact">
+          <li class="pub-row">
+            <div class="pub-main">
+              <a class="pub-title" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration: Online Dynamic Scene Graphs for Frontier-Based Exploration</a>
+              <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, 2025</span> <span class="venue-badge badge-outline">First author</span></p>
+            </div>
+            <div class="pill-row">
+              <a class="pill" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">PDF</a>
+            </div>
+          </li>
+          <li class="pub-row">
+            <div class="pub-main">
+              <a class="pub-title" href="https://arxiv.org/abs/2503.11007">From Abstraction to Reality: DARPA&rsquo;s Vision for Robust Sim-to-Real Autonomy</a>
+              <p class="pub-authors">Erfaun Noorani, Zachary Serlin, Ben Price, Alvaro Velasquez &middot; <span class="pub-venue">arXiv, Mar 2025</span> <span class="venue-badge badge-outline">Duke team featured</span></p>
+            </div>
+            <div class="pill-row">
+              <a class="pill" href="https://arxiv.org/abs/2503.11007">arXiv</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
