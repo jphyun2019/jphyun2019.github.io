@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jonathan P. Hyun</title>
-  <meta name="description" content="Jonathan P. Hyun builds agentic AI systems. CS and Math senior at Duke University, researcher at the Duke General Robotics Lab; first author of CREW-WILDFIRE (TMLR 2025), co-author of ORCH.">
+  <meta name="description" content="I build agentic AI systems that scale to thousands of LLM agents. CS and Math senior at Duke University and researcher at the Duke General Robotics Lab; creator of CREW-WILDFIRE (TMLR 2025).">
   <meta name="author" content="Jonathan P. Hyun">
   <link rel="canonical" href="https://jphyun2019.github.io/">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Jonathan P. Hyun">
-  <meta property="og:description" content="Agentic AI, multi-agent systems, robot learning. CS + Math at Duke University; Duke General Robotics Lab.">
+  <meta property="og:description" content="I build agentic AI systems that scale to thousands of LLM agents. CS + Math at Duke University; Duke General Robotics Lab.">
   <meta property="og:url" content="https://jphyun2019.github.io/">
   <meta property="og:image" content="https://jphyun2019.github.io/assets/headshot.jpg">
   <meta name="twitter:card" content="summary">
@@ -55,58 +55,50 @@
 
     <nav class="section-nav" aria-label="Sections">
       <a class="nav-link" href="#bio">About</a>
-      <a class="nav-link" href="#news">News</a>
       <a class="nav-link" href="#wildfire">CREW-WILDFIRE</a>
       <a class="nav-link" href="#publications">Publications</a>
-      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#tiamat">TIAMAT SceneGraph</a>
+      <a class="nav-link" href="#projects">More projects</a>
+      <a class="nav-link" href="#news">News</a>
       <a class="nav-link" href="#experience">Experience</a>
     </nav>
   </aside>
 
   <main class="content">
 
-    <div class="top-row">
-      <section class="section bio" id="bio" aria-labelledby="bio-h">
-        <div class="section-head"><h2 id="bio-h">About</h2><div class="rule"></div></div>
-        <p>Jonathan P. Hyun is a CS and Math senior at Duke University (May 2027) and a researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. He builds agentic AI systems. He created <a href="#wildfire">CREW-WILDFIRE</a> end to end: the simulation environment, the distributed infrastructure that runs 2,000+ LLM agents, the TMLR 2025 benchmark, and WILDFIRE-ORCH, a deployed web app where humans and AI agents fight fires as a team.</p>
-        <p>He has also shipped production software as an AI/ML engineering intern at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
-      </section>
-
-      <section class="section" id="news" aria-labelledby="news-h">
-        <div class="section-head"><h2 id="news-h">News</h2><div class="rule"></div></div>
-        <ul class="news-list">
-          <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/abs/2609.11737">ORCH</a> preprint released on arXiv.</span></li>
-          <li><time datetime="2026-04">Apr 2026</time><span>Joined MIT Lincoln Laboratory as an AI/ML engineering intern.</span></li>
-          <li><time datetime="2025">2025</time><span>CREW-WILDFIRE accepted to TMLR.</span></li>
-          <li><time datetime="2025">2025</time><span>Presented CREW-WILDFIRE at Columbia, GWU, ARL DEVCOM, and MIT Lincoln Lab.</span></li>
-          <li><time datetime="2024">2024</time><span>Co-founded Pulse LLC.</span></li>
-          <li><time datetime="2024-02">Feb 2024</time><span>Joined the Duke General Robotics Lab.</span></li>
-        </ul>
-      </section>
-    </div>
+    <section class="hero" id="bio" aria-labelledby="hero-h">
+      <p class="eyebrow">Jonathan P. Hyun &middot; Duke University &middot; General Robotics Lab</p>
+      <h2 id="hero-h" class="hero-title">I build agentic AI systems that scale to thousands of LLM agents, and ship them as real products.</h2>
+      <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live web app where humans and AI agents fight fires together. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://crew-wildfire.com">Play CREW-WILDFIRE</a>
+        <a class="btn" href="mailto:jonathan.hyun@duke.edu">Email me</a>
+        <a class="btn" href="assets/Jonathan_Hyun_Resume.pdf">Resume</a>
+      </div>
+    </section>
 
     <section class="section" id="wildfire" aria-labelledby="wf-h">
-      <div class="section-head"><h2 id="wf-h">CREW-WILDFIRE</h2><div class="rule"></div><span class="section-note">Built end to end, 2024 &ndash; present</span></div>
+      <div class="section-head"><h2 id="wf-h">Featured &middot; CREW-WILDFIRE</h2><div class="rule"></div><span class="section-note">Built end to end, 2024 &ndash; present</span></div>
       <div class="feature">
         <div class="feature-body">
           <h3 class="feature-title">A large-scale multi-agent system for LLM agents, from simulator to deployed product</h3>
-          <p class="feature-lede">Procedurally generated wildfire-response worlds where up to 2,000+ heterogeneous LLM agents (and human players) scout, contain fires, and rescue civilians together. Jonathan built the stack end to end and published it as first author in TMLR 2025.</p>
+          <p class="feature-lede">Procedurally generated wildfire-response worlds where up to 2,000+ heterogeneous LLM agents and human players scout, contain fires, and rescue civilians together. First-author paper in TMLR 2025; playable today at <a href="https://crew-wildfire.com">crew-wildfire.com</a>.</p>
           <ul class="feature-points">
             <li><strong>Environment &amp; infrastructure.</strong> Unity simulation on distributed Docker server/client containers with gRPC, scaling from a handful of agents to 2,000+.</li>
             <li><strong>Benchmark.</strong> Five state-of-the-art multi-LLM agentic algorithms evaluated across large maps, partial observability, and stochastic dynamics. Extended by ORCH, which adds organizational structure to the agents.</li>
-            <li><strong>WILDFIRE-ORCH app.</strong> A multiplayer web app where humans team with ORCH agents: React front end, real-time WebSockets, Dockerized microservices on AWS, OpenAI or self-hosted vLLM models.</li>
+            <li><strong>WILDFIRE-ORCH app.</strong> Multiplayer web app where humans team with ORCH agents: React front end, real-time WebSockets, Dockerized microservices on AWS, OpenAI or self-hosted vLLM models.</li>
           </ul>
           <ul class="stat-row">
             <li><span class="stat-num">2,000+</span><span class="stat-label">LLM agents per run</span></li>
             <li><span class="stat-num">5</span><span class="stat-label">algorithms benchmarked</span></li>
             <li><span class="stat-num">TMLR 2025</span><span class="stat-label">first author</span></li>
           </ul>
-          <div class="pill-row">
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
             <a class="pill" href="https://arxiv.org/abs/2507.05178">Paper</a>
             <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
             <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Environment code</a>
             <a class="pill" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">App code</a>
-            <a class="pill" href="https://arxiv.org/abs/2609.11737">ORCH paper</a>
           </div>
         </div>
         <div class="feature-media">
@@ -144,8 +136,31 @@
       </ul>
     </section>
 
+    <section class="section" id="tiamat" aria-labelledby="tiamat-h">
+      <div class="section-head"><h2 id="tiamat-h">Featured &middot; TIAMAT SceneGraph</h2><div class="rule"></div><span class="section-note">DARPA DRC 2025, Duke team</span></div>
+      <div class="feature">
+        <div class="feature-body">
+          <h3 class="feature-title">Open-vocabulary 3D scene graphs for language-guided robot navigation</h3>
+          <p class="feature-lede">Duke's entry to DARPA's TIAMAT robotics challenge: a Boston Dynamics Spot that understands unseen indoor and outdoor environments from natural-language tasks. I built the scene-graph module and wrote it up for ME555 Robot Learning.</p>
+          <ul class="feature-points">
+            <li><strong>Scene graphs.</strong> Region and object graphs built from accumulated depth point clouds and open-vocabulary VLM detections, so the robot can ground a language task in a place it has never seen.</li>
+            <li><strong>Navigation.</strong> Zero-shot semantic navigation on Spot through ROS, with sim-to-real transfer across Habitat, MuJoCo, and Isaac Sim before hardware.</li>
+            <li><strong>Program.</strong> Part of DARPA's TIAMAT program on sim-to-real transfer; Duke's approach is described in the program's overview paper.</li>
+          </ul>
+          <ul class="tags"><li class="tag">ROS 2</li><li class="tag">Isaac Sim</li><li class="tag">DINOv2</li><li class="tag">VLM</li><li class="tag">C++</li><li class="tag">Python</li></ul>
+          <div class="cta-row">
+            <a class="pill" href="https://arxiv.org/abs/2503.11007">DARPA TIAMAT paper</a>
+          </div>
+        </div>
+        <div class="feature-media">
+          <img src="assets/tiamat-scenegraph.jpg" alt="Scene graph overlay: labeled 3D bounding boxes for bed, toilet, furnace, slippers, and other objects over a point cloud" width="720" height="450" loading="lazy">
+          <img src="assets/tiamat-spot.jpg" alt="Boston Dynamics Spot navigating a simulated apartment in Isaac Sim" width="720" height="450" loading="lazy">
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="projects" aria-labelledby="projects-h">
-      <div class="section-head"><h2 id="projects-h">Projects</h2><div class="rule"></div></div>
+      <div class="section-head"><h2 id="projects-h">More projects</h2><div class="rule"></div></div>
       <ul class="project-grid">
         <li class="project">
           <div class="project-head"><h3>DOJO Framework</h3><a href="https://github.com/generalroboticslab/CREW">Code</a></div>
@@ -153,13 +168,8 @@
           <ul class="tags"><li class="tag">C++</li><li class="tag">PyTorch</li><li class="tag">CUDA</li></ul>
         </li>
         <li class="project">
-          <div class="project-head"><h3>TIAMAT SceneGraph &middot; DARPA DRC 2025</h3><a href="https://arxiv.org/abs/2503.11007">DARPA paper</a></div>
-          <p>Open-vocabulary 3D scene graphs for language-guided navigation on a Boston Dynamics Spot: region and object graphs from point clouds and VLM detections, sim-to-real across Habitat, MuJoCo, and Isaac Sim. Written up for ME555 Robot Learning.</p>
-          <ul class="tags"><li class="tag">ROS</li><li class="tag">Isaac Sim</li><li class="tag">VLM</li><li class="tag">C++</li></ul>
-        </li>
-        <li class="project">
           <div class="project-head"><h3>Pulse</h3></div>
-          <p>Video-feedback platform used by 500+ Duke MD students; RAG on ChromaDB generates LLM-tailored feedback.</p>
+          <p>Video-feedback platform used by 500+ Duke MD students; RAG on ChromaDB generates LLM-tailored feedback. I co-founded it and built the full stack.</p>
           <ul class="tags"><li class="tag">React</li><li class="tag">Google Cloud</li><li class="tag">Firebase</li><li class="tag">ChromaDB</li></ul>
         </li>
         <li class="project">
@@ -175,6 +185,18 @@
       </ul>
     </section>
 
+    <section class="section" id="news" aria-labelledby="news-h">
+      <div class="section-head"><h2 id="news-h">News</h2><div class="rule"></div></div>
+      <ul class="news-list news-grid">
+        <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/abs/2609.11737">ORCH</a> preprint released on arXiv.</span></li>
+        <li><time datetime="2026-04">Apr 2026</time><span>Joined MIT Lincoln Laboratory as an AI/ML engineering intern.</span></li>
+        <li><time datetime="2025">2025</time><span>CREW-WILDFIRE accepted to TMLR.</span></li>
+        <li><time datetime="2025">2025</time><span>Presented CREW-WILDFIRE at Columbia, GWU, ARL DEVCOM, and MIT Lincoln Lab.</span></li>
+        <li><time datetime="2024">2024</time><span>Co-founded Pulse LLC.</span></li>
+        <li><time datetime="2024-02">Feb 2024</time><span>Joined the Duke General Robotics Lab.</span></li>
+      </ul>
+    </section>
+
     <section class="section" id="experience" aria-labelledby="exp-h">
       <div class="section-head"><h2 id="exp-h">Experience</h2><div class="rule"></div><a class="aside-link" href="assets/Jonathan_Hyun_Resume.pdf">Full resume</a></div>
       <ul class="exp-list">
@@ -187,7 +209,7 @@
 
     <section class="section" id="lab" aria-labelledby="lab-h">
       <div class="section-head"><h2 id="lab-h">Lab &amp; Mentorship</h2><div class="rule"></div></div>
-      <p class="lab-text">Member of the <a href="https://generalroboticslab.com">General Robotics Lab</a> at Duke University, advised by Prof. <a href="https://generalroboticslab.com/director">Boyuan Chen</a>. Undergraduate mentor in the lab since 2024.</p>
+      <p class="lab-text">I am a member of the <a href="https://generalroboticslab.com">General Robotics Lab</a> at Duke University, advised by Prof. <a href="https://generalroboticslab.com/director">Boyuan Chen</a>, and I have mentored undergraduates in the lab since 2024.</p>
     </section>
 
     <footer class="site-footer">
