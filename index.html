@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="styles.css?v=1789594346">
+  <link rel="stylesheet" href="styles.css?v=1789594900">
 </head>
 <body>
 <div class="layout">
@@ -40,7 +40,8 @@
       <div class="identity-text">
         <h1 class="name">Jonathan Hyun</h1>
         <p class="tagline">Agentic AI &middot; Multi-agent systems &middot; Robot learning</p>
-        <p class="affil">CS &amp; Math, Duke University &rsquo;27<br>General Robotics Lab</p>
+        <p class="affil">CS &amp; Math, Duke University &rsquo;27<br><a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by <a href="https://generalroboticslab.com/director">Boyuan Chen</a></p>
+        <p class="affil affil-note">U.S. citizen &middot; Security clearance</p>
       </div>
     </div>
 
@@ -82,7 +83,7 @@
     <section class="hero" id="bio" aria-labelledby="hero-h">
       <p class="eyebrow">Jonathan Hyun &middot; Duke University &middot; General Robotics Lab</p>
       <h2 id="hero-h" class="hero-title">I build agentic AI systems that scale to thousands of LLM agents, and ship them as real products.</h2>
-      <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live multiplayer app where humans and AI agents work together in real time to fight procedural wildfire. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
+      <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live multiplayer app where humans and AI agents fight procedural wildfire together.</p>
       <div class="cta-row">
         <a class="btn btn-ember pulse" href="https://crew-wildfire.com">Play CREW-WILDFIRE</a>
         <a class="btn" href="mailto:jonathan.hyun@duke.edu">Contact me</a>
@@ -96,7 +97,10 @@
         <div class="feature-body">
           <h3 class="feature-title"><a class="stretched" href="https://crew-wildfire.com">An online large-scale multi-agent platform for benchmarking long-horizon complex agentic teams</a></h3>
           <p class="feature-lede">Procedurally generated wildfire worlds where up to 2,000+ LLM agents and human players scout, contain fires, and rescue civilians together, while faced with limited resources, observability, and communication.</p>
-          <p class="feature-text">Benchmarks 5 state-of-the-art multi-agent orchestration algorithms with our novel ORCH (Organizational Principles Enable Collective Intelligence in Embodied AI) algorithm built in. Allows real-time human feedback to hierarchical large-scale teams.</p>
+          <details class="more">
+            <summary>More about the system</summary>
+            <p class="feature-text">Benchmarks 5 state-of-the-art multi-agent orchestration algorithms with our novel ORCH (Organizational Principles Enable Collective Intelligence in Embodied AI) algorithm built in. Allows real-time human feedback to hierarchical large-scale teams.</p>
+          </details>
           <ul class="tags"><li class="tag">Python</li><li class="tag">AWS</li><li class="tag">vLLM</li><li class="tag">Docker</li><li class="tag">Unity</li><li class="tag">React</li><li class="tag">gRPC</li><li class="tag">WebSocket</li></ul>
           <div class="cta-row">
             <a class="btn btn-ember" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
@@ -150,7 +154,7 @@
         <div class="feature-body">
           <h3 class="feature-title"><a class="stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Online dynamic scene graphs that tell a robot where to explore next</a></h3>
           <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot builds a semantic scene graph of an unseen environment as it goes and uses it to complete natural-language tasks with no prior map.</p>
-          <p class="feature-text">From five RGB-D streams, OWLv2 produces open-vocabulary detections, DBSCAN clusters them into 3D boxes, and the boxes are tracked across frames into the scene graph, with spatial relations verified by an LLM. A task parser Agent turns a request like &ldquo;find shelter from the rain&rdquo; into object queries, and a frontier selector reasons over the partial graph to choose the next frontier to explore. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
+          <p class="feature-text">From five RGB-D streams, OWLv2 produces open-vocabulary detections, DBSCAN clusters them into 3D boxes, and the boxes are tracked across frames into the scene graph, with spatial relations verified by an LLM. A task parser Agent turns a request like &ldquo;find shelter from the rain&rdquo; into object queries, and a frontier selector reasons over the partial graph to choose the next frontier to explore.</p>
           <ul class="tags"><li class="tag">C++</li><li class="tag">ROS 2</li><li class="tag">VLMs</li><li class="tag">OWLv2</li><li class="tag">Isaac Sim</li><li class="tag">MuJoCo</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
@@ -245,17 +249,7 @@
 
     <section class="section" id="collaborations" aria-labelledby="collab-h">
       <div class="section-head"><h2 id="collab-h">Collaborations</h2><div class="rule"></div></div>
-      <ul class="collab-grid">
-        <li><a class="collab" href="https://liinc.bme.columbia.edu/"><span class="collab-name">LIINC Lab</span><span class="collab-org">Columbia University</span></a></li>
-        <li><a class="collab" href="https://psychology.columbian.gwu.edu/stephen-mitroff"><span class="collab-name">Mitroff Lab</span><span class="collab-org">George Washington University</span></a></li>
-        <li><a class="collab" href="https://arl.devcom.army.mil/"><span class="collab-name">DEVCOM Army Research Laboratory</span><span class="collab-org">U.S. Army</span></a></li>
-        <li><a class="collab" href="https://www.ll.mit.edu/"><span class="collab-name">Lincoln Laboratory</span><span class="collab-org">MIT</span></a></li>
-      </ul>
-    </section>
-
-    <section class="section" id="lab" aria-labelledby="lab-h">
-      <div class="section-head"><h2 id="lab-h">Lab</h2><div class="rule"></div></div>
-      <p class="lab-text">I am a member of the <a href="https://generalroboticslab.com">General Robotics Lab</a> at Duke University, advised by Prof. <a href="https://generalroboticslab.com/director">Boyuan Chen</a>.</p>
+      <p class="collab-text">Worked with the <a href="https://liinc.bme.columbia.edu/">LIINC Lab</a> (Columbia), the <a href="https://psychology.columbian.gwu.edu/stephen-mitroff">Mitroff Lab</a> (GWU), <a href="https://arl.devcom.army.mil/">DEVCOM Army Research Laboratory</a>, and <a href="https://www.ll.mit.edu/">MIT Lincoln Laboratory</a>.</p>
     </section>
 
     <section class="section" id="news" aria-labelledby="news-h">
@@ -274,6 +268,7 @@
         <li><time datetime="2023-03">Mar 2023</time><span>Top 16, Technical Computing award, MathWorks Math Modeling (M3) Challenge.</span></li>
         <li><time datetime="2023-01">Jan 2023</time><span>Started at Talk Hiring as a software engineering intern.</span></li>
       </ul>
+      <button class="news-toggle" type="button" hidden>Show all</button>
     </section>
 
     <footer class="site-footer">
@@ -316,6 +311,23 @@
       });
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.01 });
     below.forEach(function (el) { io.observe(el); });
+  })();
+
+  // News: show the latest five until asked for the rest.
+  (function () {
+    var list = document.querySelector('#news .news-list');
+    var btn = document.querySelector('.news-toggle');
+    if (!list || !btn) return;
+    var extra = Array.prototype.slice.call(list.children).slice(5);
+    if (!extra.length) return;
+    extra.forEach(function (li) { li.hidden = true; });
+    btn.hidden = false;
+    btn.textContent = 'Show all ' + list.children.length;
+    btn.addEventListener('click', function () {
+      var open = extra[0].hidden;
+      extra.forEach(function (li) { li.hidden = !open; });
+      btn.textContent = open ? 'Show less' : 'Show all ' + list.children.length;
+    });
   })();
 
   // Theme toggle: follows the system setting until the visitor picks one.
