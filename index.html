@@ -80,27 +80,22 @@
     </section>
 
     <section class="section" id="wildfire" aria-labelledby="wf-h">
-      <div class="section-head"><h2 id="wf-h">Featured &middot; CREW-WILDFIRE</h2><div class="rule"></div><span class="section-note">Built end to end, 2024 &ndash; present</span></div>
+      <div class="section-head"><h2 id="wf-h">Featured &middot; CREW-WILDFIRE</h2><div class="rule"></div><span class="section-note">2024 &ndash; present</span></div>
       <div class="feature">
         <div class="feature-body">
-          <h3 class="feature-title">A large-scale multi-agent system for LLM agents, from simulator to deployed product</h3>
+          <h3 class="feature-title"><a class="stretched" href="https://crew-wildfire.com">A large-scale multi-agent system for LLM agents, from simulator to deployed product</a></h3>
           <p class="feature-lede">Procedurally generated wildfire worlds where up to 2,000+ LLM agents and human players scout, contain fires, and rescue civilians together. Playable at <a href="https://crew-wildfire.com">crew-wildfire.com</a>.</p>
-          <ul class="feature-points">
-            <li><strong>Environment &amp; infrastructure.</strong> Unity simulation on distributed Docker and gRPC, from a handful of agents to 2,000+.</li>
-            <li><strong>Benchmark.</strong> Five multi-LLM agentic algorithms under partial observability and stochastic dynamics; extended by ORCH.</li>
-            <li><strong>WILDFIRE-ORCH app.</strong> Humans team with ORCH agents in the browser: React, WebSockets, AWS microservices, OpenAI or self-hosted vLLM.</li>
-          </ul>
+          <p class="feature-text">I built the Unity simulator, the distributed Docker and gRPC infrastructure that scales it to thousands of agents, the benchmark of five multi-LLM agentic algorithms, and WILDFIRE-ORCH, the browser app where humans team up with ORCH agents.</p>
           <ul class="stat-row">
             <li><span class="stat-num">2,000+</span><span class="stat-label">LLM agents per run</span></li>
             <li><span class="stat-num">5</span><span class="stat-label">algorithms benchmarked</span></li>
             <li><span class="stat-num">TMLR 2025</span><span class="stat-label">first author</span></li>
           </ul>
+          <ul class="tags"><li class="tag">Unity</li><li class="tag">Docker</li><li class="tag">gRPC</li><li class="tag">React</li><li class="tag">WebSockets</li><li class="tag">AWS</li><li class="tag">vLLM</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
-            <a class="btn" href="https://arxiv.org/abs/2507.05178">Paper</a>
             <a class="btn" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
-            <a class="btn" href="https://github.com/generalroboticslab/CREW-Wildfire">Environment code</a>
-            <a class="btn" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">App code</a>
+            <a class="btn" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">Code</a>
           </div>
         </div>
         <div class="feature-media">
@@ -109,7 +104,7 @@
             <span class="yt-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Watch the paper video</span>
           </a>
           <video class="feature-video" src="assets/orch-demo.mp4" poster="assets/orch-demo-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="320" aria-label="ORCH agents fighting a wildfire in CREW-WILDFIRE, with each agent's camera view"></video>
-          <img src="assets/wild-teaming.jpg" alt="WILDFIRE-ORCH web app: agent camera views, the team hierarchy, and chat with the manager agent" width="1000" height="547" loading="lazy">
+          <img src="assets/team-hierarchy.jpg" alt="Team hierarchy in CREW-WILDFIRE: a top manager over three managers, each directing firefighters, a bulldozer, helicopters, and a drone" width="1300" height="514" loading="lazy">
         </div>
       </div>
       <div class="papers">
@@ -117,7 +112,7 @@
         <ul class="pub-list compact">
           <li class="pub-row">
             <div class="pub-main">
-              <a class="pub-title" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
+              <a class="pub-title stretched" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
               <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span> <span class="venue-badge badge-outline">First author</span></p>
             </div>
             <div class="pill-row">
@@ -129,8 +124,8 @@
           </li>
           <li class="pub-row">
             <div class="pub-main">
-              <a class="pub-title" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
-              <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">arXiv, Sep 2026</span></p>
+              <a class="pub-title stretched" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
+              <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">Under review at Nature &middot; arXiv, Sep 2026</span> <span class="venue-badge badge-outline">Co-author</span></p>
             </div>
             <div class="pill-row">
               <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
@@ -144,15 +139,16 @@
     </section>
 
     <section class="section" id="tiamat" aria-labelledby="tiamat-h">
-      <div class="section-head"><h2 id="tiamat-h">Featured &middot; TIAMAT Scene-Graph Exploration</h2><div class="rule"></div><span class="section-note">DARPA DRC 2025 &middot; first-author paper</span></div>
+      <div class="section-head"><h2 id="tiamat-h">Featured &middot; TIAMAT Scene-Graph Exploration</h2><div class="rule"></div><span class="section-note">2025</span></div>
       <div class="feature">
         <div class="feature-body">
-          <h3 class="feature-title">Online dynamic scene graphs that tell a robot where to explore next</h3>
+          <h3 class="feature-title"><a class="stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Online dynamic scene graphs that tell a robot where to explore next</a></h3>
           <p class="feature-lede">My first-author paper from Duke's DARPA TIAMAT entry (ME555 Robot Learning). A Boston Dynamics Spot builds a 3D scene graph on the fly from streaming RGB-D and uses it to pick exploration frontiers for open-ended natural-language tasks, indoors and outdoors, with no prior map.</p>
-          <ul class="feature-points">
-            <li><strong>Online scene graph.</strong> OWLv2 open-vocabulary detections from five cameras, DBSCAN clustering into 3D boxes, cross-frame tracking with geometric, voxel, and embedding similarity, and LLM-verified spatial relations.</li>
-            <li><strong>Task-driven exploration.</strong> A task parser turns instructions like "find shelter from the rain" into object queries; an LLM frontier selector reasons over the partial graph to choose where to go.</li>
-            <li><strong>Sim to real.</strong> Developed across Habitat, MuJoCo, and Isaac Sim, then deployed on Spot through ROS 2.</li>
+          <p class="feature-text">The graph grows online from OWLv2 open-vocabulary detections across five cameras, clustered into 3D boxes and tracked across frames, with spatial relations checked by an LLM. A task parser turns an instruction like &ldquo;find shelter from the rain&rdquo; into object queries, and an LLM frontier selector reasons over the partial graph to choose where to go next. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
+          <ul class="stat-row">
+            <li><span class="stat-num">5</span><span class="stat-label">camera streams</span></li>
+            <li><span class="stat-num">3</span><span class="stat-label">sims, then Spot</span></li>
+            <li><span class="stat-num">1st</span><span class="stat-label">author</span></li>
           </ul>
           <ul class="tags"><li class="tag">ROS 2</li><li class="tag">Isaac Sim</li><li class="tag">OWLv2</li><li class="tag">LLM planning</li><li class="tag">C++</li><li class="tag">Python</li></ul>
           <div class="cta-row">
@@ -170,7 +166,7 @@
         <ul class="pub-list compact">
           <li class="pub-row">
             <div class="pub-main">
-              <a class="pub-title" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration: Online Dynamic Scene Graphs for Frontier-Based Exploration</a>
+              <a class="pub-title stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration: Online Dynamic Scene Graphs for Frontier-Based Exploration</a>
               <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, 2025</span> <span class="venue-badge badge-outline">First author</span></p>
             </div>
             <div class="pill-row">
@@ -179,7 +175,7 @@
           </li>
           <li class="pub-row">
             <div class="pub-main">
-              <a class="pub-title" href="https://arxiv.org/abs/2503.11007">From Abstraction to Reality: DARPA&rsquo;s Vision for Robust Sim-to-Real Autonomy</a>
+              <a class="pub-title stretched" href="https://arxiv.org/abs/2503.11007">From Abstraction to Reality: DARPA&rsquo;s Vision for Robust Sim-to-Real Autonomy</a>
               <p class="pub-authors">Erfaun Noorani, Zachary Serlin, Ben Price, Alvaro Velasquez &middot; <span class="pub-venue">arXiv, Mar 2025</span> <span class="venue-badge badge-outline">Duke team featured</span></p>
             </div>
             <div class="pill-row">
@@ -270,6 +266,21 @@
       update();
     }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 });
     ids.forEach(function (id) { var el = document.getElementById(id); if (el) observer.observe(el); });
+  })();
+
+  // Fade sections in as they scroll into view. Without JS everything is simply visible.
+  (function () {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.hero, .content > .section, .rail .section'));
+    // Anything already on screen at load stays visible; only what lies below the fold fades in.
+    var below = items.filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight * 0.9; });
+    below.forEach(function (el) { el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    below.forEach(function (el) { io.observe(el); });
   })();
 
   // Click-to-play YouTube: swap the poster for the embedded player. Without JS the link opens YouTube.
