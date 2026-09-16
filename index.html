@@ -57,7 +57,7 @@
       <a class="nav-link" href="#bio">About</a>
       <a class="nav-link" href="#wildfire">CREW-WILDFIRE</a>
       <a class="nav-link" href="#publications">Publications</a>
-      <a class="nav-link" href="#tiamat">TIAMAT SceneGraph</a>
+      <a class="nav-link" href="#tiamat">TIAMAT Scene Graphs</a>
       <a class="nav-link" href="#projects">More projects</a>
       <a class="nav-link" href="#news">News</a>
       <a class="nav-link" href="#experience">Experience</a>
@@ -95,14 +95,14 @@
           </ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
-            <a class="pill" href="https://arxiv.org/abs/2507.05178">Paper</a>
-            <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
-            <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Environment code</a>
-            <a class="pill" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">App code</a>
+            <a class="btn" href="https://arxiv.org/abs/2507.05178">Paper</a>
+            <a class="btn" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
+            <a class="btn" href="https://github.com/generalroboticslab/CREW-Wildfire">Environment code</a>
+            <a class="btn" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">App code</a>
           </div>
         </div>
         <div class="feature-media">
-          <img src="assets/crew-wildfire-thumb.jpg" alt="CREW-WILDFIRE simulation: helicopters and ground crews fighting a procedurally generated wildfire" width="640" height="360" loading="lazy">
+          <video class="feature-video" src="assets/orch-demo.mp4" poster="assets/orch-demo-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="320" aria-label="ORCH agents fighting a wildfire in CREW-WILDFIRE, with each agent's camera view"></video>
           <img src="assets/wild-teaming.jpg" alt="WILDFIRE-ORCH web app: agent camera views, the team hierarchy, and chat with the manager agent" width="1000" height="547" loading="lazy">
         </div>
       </div>
@@ -124,6 +124,16 @@
         </li>
         <li class="pub-row">
           <div class="pub-main">
+            <a class="pub-title" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration: Online Dynamic Scene Graphs for Frontier-Based Exploration</a>
+            <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, DARPA TIAMAT challenge, 2025</span> <span class="venue-badge badge-outline">First author</span></p>
+          </div>
+          <div class="pill-row">
+            <a class="pill" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">PDF</a>
+            <a class="pill" href="#tiamat">Featured above</a>
+          </div>
+        </li>
+        <li class="pub-row">
+          <div class="pub-main">
             <a class="pub-title" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
             <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span> <span class="venue-badge badge-outline">First author</span></p>
           </div>
@@ -137,24 +147,26 @@
     </section>
 
     <section class="section" id="tiamat" aria-labelledby="tiamat-h">
-      <div class="section-head"><h2 id="tiamat-h">Featured &middot; TIAMAT SceneGraph</h2><div class="rule"></div><span class="section-note">DARPA DRC 2025, Duke team</span></div>
+      <div class="section-head"><h2 id="tiamat-h">Featured &middot; TIAMAT Scene-Graph Exploration</h2><div class="rule"></div><span class="section-note">DARPA DRC 2025 &middot; first-author paper</span></div>
       <div class="feature">
         <div class="feature-body">
-          <h3 class="feature-title">Open-vocabulary 3D scene graphs for language-guided robot navigation</h3>
-          <p class="feature-lede">Duke's entry to DARPA's TIAMAT robotics challenge: a Boston Dynamics Spot that understands unseen indoor and outdoor environments from natural-language tasks. I built the scene-graph module and wrote it up for ME555 Robot Learning.</p>
+          <h3 class="feature-title">Online dynamic scene graphs that tell a robot where to explore next</h3>
+          <p class="feature-lede">My first-author paper from Duke's DARPA TIAMAT entry (ME555 Robot Learning). A Boston Dynamics Spot builds a 3D scene graph on the fly from streaming RGB-D and uses it to pick exploration frontiers for open-ended natural-language tasks, indoors and outdoors, with no prior map.</p>
           <ul class="feature-points">
-            <li><strong>Scene graphs.</strong> Region and object graphs built from accumulated depth point clouds and open-vocabulary VLM detections, so the robot can ground a language task in a place it has never seen.</li>
-            <li><strong>Navigation.</strong> Zero-shot semantic navigation on Spot through ROS, with sim-to-real transfer across Habitat, MuJoCo, and Isaac Sim before hardware.</li>
-            <li><strong>Program.</strong> Part of DARPA's TIAMAT program on sim-to-real transfer; Duke's approach is described in the program's overview paper.</li>
+            <li><strong>Online scene graph.</strong> OWLv2 open-vocabulary detections from five cameras, DBSCAN clustering into 3D boxes, cross-frame tracking with geometric, voxel, and embedding similarity, and LLM-verified spatial relations.</li>
+            <li><strong>Task-driven exploration.</strong> A task parser turns instructions like "find shelter from the rain" into object queries; an LLM frontier selector reasons over the partial graph to choose where to go.</li>
+            <li><strong>Sim to real.</strong> Developed across Habitat, MuJoCo, and Isaac Sim, then deployed on Spot through ROS 2.</li>
           </ul>
-          <ul class="tags"><li class="tag">ROS 2</li><li class="tag">Isaac Sim</li><li class="tag">DINOv2</li><li class="tag">VLM</li><li class="tag">C++</li><li class="tag">Python</li></ul>
+          <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, 2025</span></p>
+          <ul class="tags"><li class="tag">ROS 2</li><li class="tag">Isaac Sim</li><li class="tag">OWLv2</li><li class="tag">LLM planning</li><li class="tag">C++</li><li class="tag">Python</li></ul>
           <div class="cta-row">
-            <a class="pill" href="https://arxiv.org/abs/2503.11007">DARPA TIAMAT paper</a>
+            <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
+            <a class="btn" href="https://arxiv.org/abs/2503.11007">DARPA TIAMAT overview</a>
           </div>
         </div>
         <div class="feature-media">
-          <img src="assets/tiamat-scenegraph.jpg" alt="Scene graph overlay: labeled 3D bounding boxes for bed, toilet, furnace, slippers, and other objects over a point cloud" width="720" height="450" loading="lazy">
-          <img src="assets/tiamat-spot.jpg" alt="Boston Dynamics Spot navigating a simulated apartment in Isaac Sim" width="720" height="450" loading="lazy">
+          <img src="assets/tiamat-pipeline.jpg" alt="Pipeline figure: RGB-D input through OWLv2 detection and DBSCAN clustering into 3D boxes, aggregated into a dynamic scene graph that feeds an LLM frontier selector and Spot's locomotion policy" width="1400" height="790" loading="lazy">
+          <img src="assets/tiamat-scenegraph.jpg" alt="Dynamic scene graph: labeled 3D bounding boxes for armchair, bedframe, slippers, heater, and other objects" width="800" height="569" loading="lazy">
         </div>
       </div>
     </section>
@@ -185,18 +197,6 @@
       </ul>
     </section>
 
-    <section class="section" id="news" aria-labelledby="news-h">
-      <div class="section-head"><h2 id="news-h">News</h2><div class="rule"></div></div>
-      <ul class="news-list news-grid">
-        <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/abs/2609.11737">ORCH</a> preprint released on arXiv.</span></li>
-        <li><time datetime="2026-04">Apr 2026</time><span>Joined MIT Lincoln Laboratory as an AI/ML engineering intern.</span></li>
-        <li><time datetime="2025">2025</time><span>CREW-WILDFIRE accepted to TMLR.</span></li>
-        <li><time datetime="2025">2025</time><span>Presented CREW-WILDFIRE at Columbia, GWU, ARL DEVCOM, and MIT Lincoln Lab.</span></li>
-        <li><time datetime="2024">2024</time><span>Co-founded Pulse LLC.</span></li>
-        <li><time datetime="2024-02">Feb 2024</time><span>Joined the Duke General Robotics Lab.</span></li>
-      </ul>
-    </section>
-
     <section class="section" id="experience" aria-labelledby="exp-h">
       <div class="section-head"><h2 id="exp-h">Experience</h2><div class="rule"></div><a class="aside-link" href="assets/Jonathan_Hyun_Resume.pdf">Full resume</a></div>
       <ul class="exp-list">
@@ -217,6 +217,21 @@
       <span class="updated">Last updated September 2026</span>
     </footer>
   </main>
+
+  <aside class="rail" aria-label="News">
+    <section class="section" id="news" aria-labelledby="news-h">
+      <div class="section-head"><h2 id="news-h">News</h2><div class="rule"></div></div>
+      <ul class="news-list">
+        <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/abs/2609.11737">ORCH</a> preprint released on arXiv.</span></li>
+        <li><time datetime="2026-04">Apr 2026</time><span>Joined MIT Lincoln Laboratory as an AI/ML engineering intern.</span></li>
+        <li><time datetime="2025-12">Dec 2025</time><span>Wrote up <a href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration</a> as first author.</span></li>
+        <li><time datetime="2025">2025</time><span>CREW-WILDFIRE accepted to TMLR.</span></li>
+        <li><time datetime="2025">2025</time><span>Presented CREW-WILDFIRE at Columbia, GWU, ARL DEVCOM, and MIT Lincoln Lab.</span></li>
+        <li><time datetime="2024">2024</time><span>Co-founded Pulse LLC.</span></li>
+        <li><time datetime="2024-02">Feb 2024</time><span>Joined the Duke General Robotics Lab.</span></li>
+      </ul>
+    </section>
+  </aside>
 </div>
 
 <script>
