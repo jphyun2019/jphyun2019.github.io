@@ -13,16 +13,25 @@
   <meta property="og:url" content="https://jphyun2019.github.io/">
   <meta property="og:image" content="https://jphyun2019.github.io/assets/crew-wildfire-teaser.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1218" media="(prefers-color-scheme: dark)">
+  <script>try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="styles.css?v=1789593335">
+  <link rel="stylesheet" href="styles.css?v=1789593981">
 </head>
 <body>
 <div class="layout">
 
   <aside class="sidebar">
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <span class="theme-label visually-hidden">Dark mode</span>
+    </button>
     <div class="identity">
       <span class="headshot-wrap">
         <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Jonathan Hyun" width="120" height="120">
@@ -64,6 +73,7 @@
       <a class="nav-link" href="#experience">Experience</a>
       <a class="nav-link" href="#collaborations">Collaborations</a>
     </nav>
+
   </aside>
 
   <main class="content">
@@ -71,7 +81,7 @@
     <section class="hero" id="bio" aria-labelledby="hero-h">
       <p class="eyebrow">Jonathan Hyun &middot; Duke University &middot; General Robotics Lab</p>
       <h2 id="hero-h" class="hero-title">I build agentic AI systems that scale to thousands of LLM agents, and ship them as real products.</h2>
-      <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live web app where humans and AI agents fight fires together. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
+      <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live multiplayer app where humans and AI agents work together in real time to fight procedural wildfire. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
       <div class="cta-row">
         <a class="btn btn-ember pulse" href="https://crew-wildfire.com">Play CREW-WILDFIRE</a>
         <a class="btn" href="mailto:jonathan.hyun@duke.edu">Contact me</a>
@@ -139,7 +149,7 @@
         <div class="feature-body">
           <h3 class="feature-title"><a class="stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Online dynamic scene graphs that tell a robot where to explore next</a></h3>
           <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot builds a semantic scene graph of an unseen environment as it goes and uses it to complete natural-language tasks with no prior map.</p>
-          <p class="feature-text">From five RGB-D streams, OWLv2 produces open-vocabulary detections, DBSCAN clusters them into 3D boxes, and the boxes are tracked across frames into the scene graph, with spatial relations verified by an LLM. Two LLM agents then drive the mission: a task parser turns a request like &ldquo;find shelter from the rain&rdquo; into object queries, and a frontier selector reasons over the partial graph to choose the next frontier to explore. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
+          <p class="feature-text">From five RGB-D streams, OWLv2 produces open-vocabulary detections, DBSCAN clusters them into 3D boxes, and the boxes are tracked across frames into the scene graph, with spatial relations verified by an LLM. A task parser Agent turns a request like &ldquo;find shelter from the rain&rdquo; into object queries, and a frontier selector reasons over the partial graph to choose the next frontier to explore. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
           <ul class="tags"><li class="tag">C++</li><li class="tag">ROS 2</li><li class="tag">VLMs</li><li class="tag">OWLv2</li><li class="tag">Isaac Sim</li><li class="tag">MuJoCo</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
@@ -306,6 +316,29 @@
       });
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.01 });
     below.forEach(function (el) { io.observe(el); });
+  })();
+
+  // Theme toggle: follows the system setting until the visitor picks one.
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+    var root = document.documentElement;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function current() { return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light'); }
+    function paint() {
+      var dark = current() === 'dark';
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.querySelector('.theme-label').textContent = dark ? 'Light mode' : 'Dark mode';
+    }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paint();
+    });
+    mq.addEventListener('change', paint);
+    paint();
   })();
 
   // One-time glow on the CREW-WILDFIRE card when it scrolls into view.
