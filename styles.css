@@ -276,7 +276,7 @@ h1, h2, h3 { margin: 0; }
 .exp .role { color: var(--muted); font-size: 13px; padding-top: 2px; }
 .exp .when { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: right; padding-top: 3px; }
 
-/* Lab + mentorship */
+/* Lab */
 .lab-text { font-size: 14px; line-height: 1.55; color: var(--text-2); }
 
 /* Footer */
