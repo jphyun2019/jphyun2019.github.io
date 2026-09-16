@@ -56,6 +56,7 @@
     <nav class="section-nav" aria-label="Sections">
       <a class="nav-link" href="#bio">About</a>
       <a class="nav-link" href="#news">News</a>
+      <a class="nav-link" href="#wildfire">CREW-WILDFIRE</a>
       <a class="nav-link" href="#publications">Publications</a>
       <a class="nav-link" href="#projects">Projects</a>
       <a class="nav-link" href="#experience">Experience</a>
@@ -67,7 +68,7 @@
     <div class="top-row">
       <section class="section bio" id="bio" aria-labelledby="bio-h">
         <div class="section-head"><h2 id="bio-h">About</h2><div class="rule"></div></div>
-        <p>Jonathan P. Hyun is a CS and Math senior at Duke University (May 2027) and a researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. He builds agentic AI systems: he is first author of CREW-WILDFIRE, a TMLR 2025 benchmark where 2,000+ LLM agents collaborate at scale, and co-author of ORCH, which extends it with organizational structure for embodied agents.</p>
+        <p>Jonathan P. Hyun is a CS and Math senior at Duke University (May 2027) and a researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. He builds agentic AI systems. He created <a href="#wildfire">CREW-WILDFIRE</a> end to end: the simulation environment, the distributed infrastructure that runs 2,000+ LLM agents, the TMLR 2025 benchmark, and WILDFIRE-ORCH, a deployed web app where humans and AI agents fight fires as a team.</p>
         <p>He has also shipped production software as an AI/ML engineering intern at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
       </section>
 
@@ -84,42 +85,60 @@
       </section>
     </div>
 
+    <section class="section" id="wildfire" aria-labelledby="wf-h">
+      <div class="section-head"><h2 id="wf-h">CREW-WILDFIRE</h2><div class="rule"></div><span class="section-note">Built end to end, 2024 &ndash; present</span></div>
+      <div class="feature">
+        <div class="feature-body">
+          <h3 class="feature-title">A large-scale multi-agent system for LLM agents, from simulator to deployed product</h3>
+          <p class="feature-lede">Procedurally generated wildfire-response worlds where up to 2,000+ heterogeneous LLM agents (and human players) scout, contain fires, and rescue civilians together. Jonathan built the stack end to end and published it as first author in TMLR 2025.</p>
+          <ul class="feature-points">
+            <li><strong>Environment &amp; infrastructure.</strong> Unity simulation on distributed Docker server/client containers with gRPC, scaling from a handful of agents to 2,000+.</li>
+            <li><strong>Benchmark.</strong> Five state-of-the-art multi-LLM agentic algorithms evaluated across large maps, partial observability, and stochastic dynamics. Extended by ORCH, which adds organizational structure to the agents.</li>
+            <li><strong>WILDFIRE-ORCH app.</strong> A multiplayer web app where humans team with ORCH agents: React front end, real-time WebSockets, Dockerized microservices on AWS, OpenAI or self-hosted vLLM models.</li>
+          </ul>
+          <ul class="stat-row">
+            <li><span class="stat-num">2,000+</span><span class="stat-label">LLM agents per run</span></li>
+            <li><span class="stat-num">5</span><span class="stat-label">algorithms benchmarked</span></li>
+            <li><span class="stat-num">TMLR 2025</span><span class="stat-label">first author</span></li>
+          </ul>
+          <div class="pill-row">
+            <a class="pill" href="https://arxiv.org/abs/2507.05178">Paper</a>
+            <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
+            <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Environment code</a>
+            <a class="pill" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">App code</a>
+            <a class="pill" href="https://arxiv.org/abs/2609.11737">ORCH paper</a>
+          </div>
+        </div>
+        <div class="feature-media">
+          <img src="assets/crew-wildfire-thumb.jpg" alt="CREW-WILDFIRE simulation: helicopters and ground crews fighting a procedurally generated wildfire" width="640" height="360" loading="lazy">
+          <img src="assets/wild-teaming.jpg" alt="WILDFIRE-ORCH web app: agent camera views, the team hierarchy, and chat with the manager agent" width="1000" height="547" loading="lazy">
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="publications" aria-labelledby="pubs-h">
       <div class="section-head"><h2 id="pubs-h">Publications</h2><div class="rule"></div><a class="aside-link" href="https://scholar.google.com/citations?user=LM4zoDwAAAAJ&amp;hl=en">Google Scholar</a></div>
-      <ul class="pub-list">
-        <li class="pub">
-          <img class="pub-thumb" src="assets/orch-thumb.jpg" alt="Wildfire-response simulation from ORCH with manager agents coordinating teams" width="160" height="100" loading="lazy">
-          <div class="pub-body">
-            <div class="pub-title-row">
-              <a class="pub-title" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
-            </div>
-            <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen</p>
-            <p class="pub-venue">arXiv preprint &middot; September 2026</p>
-            <p class="pub-summary">Human organizational principles applied to teams of up to 50 embodied agents: +64% performance and +74% efficiency over baselines across 25 wildfire scenarios and 8 LLMs.</p>
-            <div class="pill-row">
-              <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
-              <a class="pill" href="https://generalroboticslab.com/ORCH">Project page</a>
-              <a class="pill" href="https://github.com/generalroboticslab/ORCH">Code</a>
-            </div>
+      <ul class="pub-list compact">
+        <li class="pub-row">
+          <div class="pub-main">
+            <a class="pub-title" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
+            <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">arXiv, Sep 2026</span></p>
+          </div>
+          <div class="pill-row">
+            <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
+            <a class="pill" href="https://generalroboticslab.com/ORCH">Project page</a>
+            <a class="pill" href="https://github.com/generalroboticslab/ORCH">Code</a>
           </div>
         </li>
-        <li class="pub">
-          <img class="pub-thumb" src="assets/crew-wildfire-thumb.jpg" alt="CREW-WILDFIRE: humans and AI agents fighting a simulated wildfire together" width="160" height="100" loading="lazy">
-          <div class="pub-body">
-            <div class="pub-title-row">
-              <a class="pub-title" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
-              <span class="venue-badge">TMLR 2025</span>
-              <span class="venue-badge badge-outline">First author</span>
-            </div>
-            <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen</p>
-            <p class="pub-venue">Transactions on Machine Learning Research &middot; 2025</p>
-            <p class="pub-summary">Benchmark and infrastructure for agentic collaboration at scale: 2,000+ LLM agents over distributed Docker/gRPC, five state-of-the-art multi-agent algorithms compared.</p>
-            <div class="pill-row">
-              <a class="pill" href="https://arxiv.org/abs/2507.05178">arXiv</a>
-              <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
-              <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Code</a>
-              <a class="pill" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">Play it</a>
-            </div>
+        <li class="pub-row">
+          <div class="pub-main">
+            <a class="pub-title" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
+            <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span> <span class="venue-badge badge-outline">First author</span></p>
+          </div>
+          <div class="pill-row">
+            <a class="pill" href="https://arxiv.org/abs/2507.05178">arXiv</a>
+            <a class="pill" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
+            <a class="pill" href="https://github.com/generalroboticslab/CREW-Wildfire">Code</a>
           </div>
         </li>
       </ul>
@@ -128,14 +147,6 @@
     <section class="section" id="projects" aria-labelledby="projects-h">
       <div class="section-head"><h2 id="projects-h">Projects</h2><div class="rule"></div></div>
       <ul class="project-grid">
-        <li class="project featured">
-          <div class="project-body">
-            <div class="project-head"><h3>WILD-Teaming</h3><a href="https://github.com/generalroboticslab/WILDFIRE-ORCH">Code</a></div>
-            <p>Multiplayer web app where humans and ORCH agents fight wildfires together. Dockerized microservices on AWS, real-time WebSockets, OpenAI or self-hosted vLLM models; a modular LLM/VLM agent architecture cuts inference time by log(N).</p>
-            <ul class="tags"><li class="tag">React</li><li class="tag">WebSocket</li><li class="tag">AWS</li><li class="tag">Docker</li><li class="tag">vLLM</li></ul>
-          </div>
-          <img class="project-img" src="assets/wild-teaming.jpg" alt="WILD-Teaming interface: agent camera views, the team hierarchy graph, and chat with the manager agent" width="1000" height="547" loading="lazy">
-        </li>
         <li class="project">
           <div class="project-head"><h3>DOJO Framework</h3><a href="https://github.com/generalroboticslab/CREW">Code</a></div>
           <p>C++/PyTorch/CUDA framework for human-in-the-loop reinforcement learning: 50+ robots, 10 algorithms (PPO, DQN, DDPG, SAC, GUIDE, COACH).</p>
