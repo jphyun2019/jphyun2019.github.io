@@ -66,7 +66,7 @@ h1, h2, h3 { margin: 0; }
 .identity-text { display: flex; flex-direction: column; gap: 6px; }
 .name { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
 .affil { font-size: 14px; color: var(--muted); line-height: 1.45; }
-.lab-line { font-size: 14px; color: var(--accent); font-weight: 500; }
+.tagline { font-size: 14px; color: var(--accent); font-weight: 600; line-height: 1.4; }
 
 .links { display: flex; flex-direction: column; gap: 12px; list-style: none; margin: 0; padding: 0; }
 .side-link { display: flex; align-items: center; gap: 10px; color: var(--text); font-size: 14px; font-weight: 500; }
@@ -130,6 +130,7 @@ h1, h2, h3 { margin: 0; }
   background: var(--accent); color: #ffffff;
   font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
 }
+.badge-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 2px 7px; }
 .pub-authors { font-size: 14px; color: var(--text-2); }
 .pub-authors .me { color: var(--accent); font-weight: 700; }
 .pub-venue { font-family: var(--mono); font-size: 12px; color: var(--muted); }
@@ -155,6 +156,11 @@ h1, h2, h3 { margin: 0; }
 .tags { display: flex; gap: 6px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
 .tag { display: inline-block; padding: 2px 7px; border-radius: 4px; background: var(--tag); color: var(--muted); font-size: 11px; font-family: var(--mono); }
 
+/* Featured project: full width with a product screenshot */
+.project.featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; align-items: center; }
+.project-body { display: flex; flex-direction: column; gap: 8px; }
+.project-img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+
 /* Experience */
 .exp-list { display: flex; flex-direction: column; list-style: none; margin: 0; padding: 0; }
 .exp {
@@ -166,9 +172,8 @@ h1, h2, h3 { margin: 0; }
 .exp .role { color: var(--muted); font-size: 13px; padding-top: 2px; }
 .exp .when { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: right; padding-top: 3px; }
 
-/* Mentorship + Lab */
-.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
-.two-col p { font-size: 14px; line-height: 1.55; color: var(--text-2); }
+/* Lab + mentorship */
+.lab-text { font-size: 14px; line-height: 1.55; color: var(--text-2); }
 
 /* Footer */
 .site-footer {
@@ -190,7 +195,7 @@ h1, h2, h3 { margin: 0; }
   .headshot { width: 76px; height: 76px; border-radius: 12px; flex: none; }
   .identity-text { gap: 4px; }
   .name { font-size: 22px; }
-  .affil, .lab-line { font-size: 13px; }
+  .affil, .tagline { font-size: 13px; }
   .links { flex-direction: row; flex-wrap: wrap; gap: 8px; }
   .side-link {
     padding: 8px 12px; border: 1px solid var(--chip-border); border-radius: 999px;
@@ -206,8 +211,9 @@ h1, h2, h3 { margin: 0; }
   .pub-thumb { width: 100%; height: 150px; }
   .pub-title { font-size: 16px; }
   .project-grid { grid-template-columns: 1fr; gap: 10px; }
+  .project.featured { grid-template-columns: 1fr; }
+  .project.featured .project-img { order: -1; }
   .exp { grid-template-columns: 1fr; gap: 2px; }
   .exp .when { text-align: left; padding-top: 2px; }
-  .two-col { grid-template-columns: 1fr; gap: 28px; }
   .site-footer { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
