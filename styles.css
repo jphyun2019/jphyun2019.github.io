@@ -53,7 +53,7 @@ h1, h2, h3 { margin: 0; }
 
 /* Right rail (news) */
 .rail {
-  padding: 44px 24px 40px 24px; border-left: 1px solid var(--border);
+  padding: 44px 24px 40px 24px;
 }
 .rail .news-list { font-size: 13px; gap: 12px; }
 .rail .news-list li { grid-template-columns: 56px minmax(0, 1fr); gap: 8px; }
@@ -298,7 +298,7 @@ h1, h2, h3 { margin: 0; }
 /* Below that: fold the news rail under the content */
 @media (max-width: 1080px) {
   .layout { grid-template-columns: var(--sidebar) minmax(0, 1fr); }
-  .rail { border-left: 0; grid-column: 2; padding: 0 48px 40px; }
+  .rail { grid-column: 2; padding: 0 48px 40px; }
   .rail .section { max-width: 1040px; margin: 0 auto; }
 }
 
