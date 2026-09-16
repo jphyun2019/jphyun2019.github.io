@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="styles.css?v=1789592884">
+  <link rel="stylesheet" href="styles.css?v=1789593335">
 </head>
 <body>
 <div class="layout">
@@ -73,7 +73,7 @@
       <h2 id="hero-h" class="hero-title">I build agentic AI systems that scale to thousands of LLM agents, and ship them as real products.</h2>
       <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live web app where humans and AI agents fight fires together. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://crew-wildfire.com">Play CREW-WILDFIRE</a>
+        <a class="btn btn-ember pulse" href="https://crew-wildfire.com">Play CREW-WILDFIRE</a>
         <a class="btn" href="mailto:jonathan.hyun@duke.edu">Contact me</a>
         <a class="btn" href="assets/Jonathan_Hyun_Resume.pdf">Resume</a>
       </div>
@@ -88,7 +88,7 @@
           <p class="feature-text">Benchmarks 5 state-of-the-art multi-agent orchestration algorithms with our novel ORCH (Organizational Principles Enable Collective Intelligence in Embodied AI) algorithm built in. Allows real-time human feedback to hierarchical large-scale teams.</p>
           <ul class="tags"><li class="tag">Python</li><li class="tag">AWS</li><li class="tag">vLLM</li><li class="tag">Docker</li><li class="tag">Unity</li><li class="tag">React</li><li class="tag">gRPC</li><li class="tag">WebSocket</li></ul>
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
+            <a class="btn btn-ember" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
             <a class="btn" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
             <a class="btn" href="https://github.com/generalroboticslab/WILDFIRE-ORCH">Code</a>
           </div>
@@ -306,6 +306,18 @@
       });
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.01 });
     below.forEach(function (el) { io.observe(el); });
+  })();
+
+  // One-time glow on the CREW-WILDFIRE card when it scrolls into view.
+  (function () {
+    var card = document.querySelector('#wildfire .feature');
+    if (!card || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { card.classList.add('glow'); io.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    io.observe(card);
   })();
 
   // Click-to-play YouTube: swap the poster for the embedded player. Without JS the link opens YouTube.

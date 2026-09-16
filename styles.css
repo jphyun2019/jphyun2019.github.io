@@ -7,6 +7,8 @@
   --text-2: #2b2f37;
   --muted: #5f6673;
   --accent: #012169;
+  --ember: #cf4a1c;
+  --ember-hover: #b23d15;
   --link: #012169;
   --link-hover: #1a3a8f;
   --border: #e4e4df;
@@ -161,6 +163,28 @@ h1, h2, h3 { margin: 0; }
 .yt:hover .yt-badge { background: var(--accent); }
 .yt-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px; display: block; background: #000; }
 @media (prefers-reduced-motion: reduce) { .yt img { transition: none; } .yt:hover img { transform: none; } }
+
+/* Ember accent: reserved for CREW-WILDFIRE only */
+.btn-ember { background: var(--ember); border-color: var(--ember); color: #ffffff; }
+.btn-ember:hover { background: var(--ember-hover); border-color: var(--ember-hover); color: #ffffff; }
+#wildfire .section-head h2 { color: var(--ember); }
+#wildfire .feature { border-color: rgba(207, 74, 28, 0.5); }
+#wildfire .feature:hover { border-color: var(--ember); box-shadow: 0 6px 24px rgba(207, 74, 28, 0.14); }
+#wildfire .feature-title a:hover { color: var(--ember); }
+#wildfire .yt:hover .yt-badge { background: var(--ember); }
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(207, 74, 28, 0.45); }
+  70% { box-shadow: 0 0 0 12px rgba(207, 74, 28, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(207, 74, 28, 0); }
+}
+.btn-ember.pulse { animation: pulse-ring 1.6s ease-out 0.9s 2; }
+@keyframes card-glow {
+  0% { box-shadow: 0 0 0 0 rgba(207, 74, 28, 0); }
+  40% { box-shadow: 0 0 0 6px rgba(207, 74, 28, 0.18), 0 6px 24px rgba(207, 74, 28, 0.14); }
+  100% { box-shadow: 0 0 0 0 rgba(207, 74, 28, 0); }
+}
+#wildfire .feature.glow { animation: card-glow 1.8s ease-out 1; }
+@media (prefers-reduced-motion: reduce) { .btn-ember.pulse, #wildfire .feature.glow { animation: none; } }
 
 /* Featured system */
 .section-note { font-family: var(--mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; }
