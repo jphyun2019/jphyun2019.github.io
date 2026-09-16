@@ -287,8 +287,16 @@ h1, h2, h3 { margin: 0; }
 .site-footer a { color: var(--muted); }
 .site-footer .updated { font-family: var(--mono); font-size: 11.5px; }
 
-/* Laptop: fold the news rail under the content */
-@media (max-width: 1200px) {
+/* Narrow laptops: slimmer columns so the news rail stays pinned */
+@media (max-width: 1280px) {
+  :root { --sidebar: 260px; --rail: 220px; }
+  .sidebar { padding: 36px 24px 36px 28px; }
+  .content { padding: 40px 32px 40px; }
+  .rail { padding: 40px 20px 40px 20px; }
+}
+
+/* Below that: fold the news rail under the content */
+@media (max-width: 1080px) {
   .layout { grid-template-columns: var(--sidebar) minmax(0, 1fr); }
   .rail { position: static; height: auto; border-left: 0; grid-column: 2; padding: 0 48px 40px; }
   .rail .section { max-width: 1040px; margin: 0 auto; }
