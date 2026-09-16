@@ -138,8 +138,8 @@
       <div class="feature">
         <div class="feature-body">
           <h3 class="feature-title"><a class="stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Online dynamic scene graphs that tell a robot where to explore next</a></h3>
-          <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot explores unknown indoor and outdoor spaces with no prior map, driven by AI agents: a vision-language foundation model perceives the scene and LLM agents decide what to do next.</p>
-          <p class="feature-text">A VLM foundation model (OWLv2) turns five camera streams into open-vocabulary detections that are clustered into 3D boxes and tracked into a live semantic scene graph, with an LLM verifying spatial relations. On top of that graph, LLM agents run the mission: a task-parser agent turns an instruction like &ldquo;find shelter from the rain&rdquo; into object queries, and a frontier-selector agent reasons over the partial graph to choose where to explore next. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
+          <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot explores places it has never seen, with no map, and finds what it is asked for.</p>
+          <p class="feature-text">As the robot moves, a vision-language model spots objects in its camera feeds, and I assemble them into a live map of what is where. LLM agents then run the mission: one turns a request like &ldquo;find shelter from the rain&rdquo; into things to look for, another reads the map and picks where to explore next. Built in simulation first, then run on Spot.</p>
           <ul class="tags"><li class="tag">C++</li><li class="tag">ROS 2</li><li class="tag">VLMs</li><li class="tag">OWLv2</li><li class="tag">Isaac Sim</li><li class="tag">MuJoCo</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
