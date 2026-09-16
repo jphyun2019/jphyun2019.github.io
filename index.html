@@ -74,7 +74,7 @@
       <p class="hero-sub">CS and Math senior at Duke (May 2027) and researcher at the Duke <a href="https://generalroboticslab.com">General Robotics Lab</a>, advised by Prof. Boyuan Chen. I created CREW-WILDFIRE end to end, from simulator and distributed infrastructure to a TMLR 2025 benchmark and a live web app where humans and AI agents fight fires together. I have also shipped production software at MIT Lincoln Laboratory and as co-founder of Pulse LLC. U.S. citizen with a full U.S. government security clearance.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://crew-wildfire.com">Play CREW-WILDFIRE</a>
-        <a class="btn" href="mailto:jonathan.hyun@duke.edu">Email me</a>
+        <a class="btn" href="mailto:jonathan.hyun@duke.edu">Contact me</a>
         <a class="btn" href="assets/Jonathan_Hyun_Resume.pdf">Resume</a>
       </div>
     </section>
@@ -86,7 +86,7 @@
           <h3 class="feature-title"><a class="stretched" href="https://crew-wildfire.com">A large-scale multi-agent system for LLM agents, from simulator to deployed product</a></h3>
           <p class="feature-lede">Procedurally generated wildfire worlds where up to 2,000+ LLM agents and human players scout, contain fires, and rescue civilians together. Playable at <a href="https://crew-wildfire.com">crew-wildfire.com</a>.</p>
           <p class="feature-text">I built the Unity simulator, the distributed Docker and gRPC infrastructure that scales it to thousands of agents, the benchmark of five multi-LLM agentic algorithms, and WILDFIRE-ORCH, the browser app where humans team up with ORCH agents.</p>
-          <ul class="tags"><li class="tag">Unity</li><li class="tag">Docker</li><li class="tag">gRPC</li><li class="tag">React</li><li class="tag">WebSockets</li><li class="tag">AWS</li><li class="tag">vLLM</li></ul>
+          <ul class="tags"><li class="tag">Python</li><li class="tag">AWS</li><li class="tag">vLLM</li><li class="tag">Docker</li><li class="tag">Unity</li><li class="tag">React</li><li class="tag">gRPC</li><li class="tag">WebSocket</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
             <a class="btn" href="https://generalroboticslab.com/CREW-Wildfire">Project page</a>
@@ -108,7 +108,7 @@
           <li class="pub-row">
             <div class="pub-main">
               <a class="pub-title stretched" href="https://arxiv.org/abs/2507.05178">CREW-WILDFIRE: Benchmarking Agentic Multi-Agent Collaborations at Scale</a>
-              <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span> <span class="venue-badge badge-outline">First author</span></p>
+              <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Nicholas R. Waytowich, Boyuan Chen &middot; <span class="pub-venue">TMLR 2025</span></p>
             </div>
             <div class="pill-row">
               <a class="pill" href="https://arxiv.org/abs/2507.05178">arXiv</a>
@@ -120,7 +120,7 @@
           <li class="pub-row">
             <div class="pub-main">
               <a class="pub-title stretched" href="https://arxiv.org/abs/2609.11737">ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI</a>
-              <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">Under review at Nature &middot; arXiv, Sep 2026</span> <span class="venue-badge badge-outline">Co-author</span></p>
+              <p class="pub-authors">Zhengran Ji, <span class="me">Jonathan Hyun</span>, Boyuan Chen &middot; <span class="pub-venue">Under review at Nature &middot; arXiv, Sep 2026</span></p>
             </div>
             <div class="pill-row">
               <a class="pill" href="https://arxiv.org/abs/2609.11737">arXiv</a>
@@ -138,9 +138,9 @@
       <div class="feature">
         <div class="feature-body">
           <h3 class="feature-title"><a class="stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Online dynamic scene graphs that tell a robot where to explore next</a></h3>
-          <p class="feature-lede">My first-author paper from Duke's DARPA TIAMAT entry (ME555 Robot Learning). A Boston Dynamics Spot builds a 3D scene graph on the fly from streaming RGB-D and uses it to pick exploration frontiers for open-ended natural-language tasks, indoors and outdoors, with no prior map.</p>
+          <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot builds a 3D scene graph on the fly from streaming RGB-D and uses it to pick exploration frontiers for open-ended natural-language tasks, indoors and outdoors, with no prior map. I built the scene-graph module.</p>
           <p class="feature-text">The graph grows online from OWLv2 open-vocabulary detections across five cameras, clustered into 3D boxes and tracked across frames, with spatial relations checked by an LLM. A task parser turns an instruction like &ldquo;find shelter from the rain&rdquo; into object queries, and an LLM frontier selector reasons over the partial graph to choose where to go next. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
-          <ul class="tags"><li class="tag">ROS 2</li><li class="tag">Isaac Sim</li><li class="tag">OWLv2</li><li class="tag">LLM planning</li><li class="tag">C++</li><li class="tag">Python</li></ul>
+          <ul class="tags"><li class="tag">C++</li><li class="tag">ROS 2</li><li class="tag">VLMs</li><li class="tag">OWLv2</li><li class="tag">Isaac Sim</li><li class="tag">MuJoCo</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
             <a class="btn" href="https://arxiv.org/abs/2503.11007">DARPA program overview</a>
@@ -157,7 +157,7 @@
           <li class="pub-row">
             <div class="pub-main">
               <a class="pub-title stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration: Online Dynamic Scene Graphs for Frontier-Based Exploration</a>
-              <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">Duke University, 2025</span> <span class="venue-badge badge-outline">First author</span></p>
+              <p class="pub-authors"><span class="me">Jonathan Hyun</span>, Easop Lee, Lingyu Zhang &middot; <span class="pub-venue">2025</span></p>
             </div>
             <div class="pill-row">
               <a class="pill" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">PDF</a>
@@ -166,7 +166,7 @@
           <li class="pub-row">
             <div class="pub-main">
               <a class="pub-title stretched" href="https://arxiv.org/abs/2503.11007">From Abstraction to Reality: DARPA&rsquo;s Vision for Robust Sim-to-Real Autonomy</a>
-              <p class="pub-authors">Erfaun Noorani, Zachary Serlin, Ben Price, Alvaro Velasquez &middot; <span class="pub-venue">arXiv, Mar 2025</span> <span class="venue-badge badge-outline">Duke team featured</span></p>
+              <p class="pub-authors">Erfaun Noorani, Zachary Serlin, Ben Price, Alvaro Velasquez &middot; <span class="pub-venue">arXiv, Mar 2025</span></p>
             </div>
             <div class="pill-row">
               <a class="pill" href="https://arxiv.org/abs/2503.11007">arXiv</a>
@@ -229,7 +229,7 @@
       <ul class="news-list">
         <li><time datetime="2026-09">Sep 2026</time><span><a href="https://arxiv.org/abs/2609.11737">ORCH</a> preprint released on arXiv.</span></li>
         <li><time datetime="2026-04">Apr 2026</time><span>Joined MIT Lincoln Laboratory as an AI/ML engineering intern.</span></li>
-        <li><time datetime="2025-12">Dec 2025</time><span>Wrote up <a href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration</a> as first author.</span></li>
+        <li><time datetime="2025-12">Dec 2025</time><span>Wrote up <a href="assets/TIAMAT_Scene_Graph_Exploration.pdf">TIAMAT Scene-Graph Exploration</a> for Duke&rsquo;s DARPA TIAMAT entry.</span></li>
         <li><time datetime="2025">2025</time><span>CREW-WILDFIRE accepted to TMLR.</span></li>
         <li><time datetime="2025">2025</time><span>Presented CREW-WILDFIRE at Columbia, GWU, ARL DEVCOM, and MIT Lincoln Lab.</span></li>
         <li><time datetime="2024">2024</time><span>Co-founded Pulse LLC.</span></li>
@@ -258,18 +258,18 @@
     ids.forEach(function (id) { var el = document.getElementById(id); if (el) observer.observe(el); });
   })();
 
-  // Fade sections in as they scroll into view. Without JS everything is simply visible.
+  // Fade content in as it scrolls into view. Without JS everything is simply visible.
   (function () {
-    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var items = Array.prototype.slice.call(document.querySelectorAll('.hero, .content > .section, .rail .section'));
+    if (!('IntersectionObserver' in window)) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll('.hero, .content > .section, .rail .section, .feature, .papers, .project, .exp'));
     // Anything already on screen at load stays visible; only what lies below the fold fades in.
-    var below = items.filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight * 0.9; });
+    var below = items.filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight * 0.85; });
     below.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.01 });
     below.forEach(function (el) { io.observe(el); });
   })();
 
