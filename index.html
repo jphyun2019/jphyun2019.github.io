@@ -83,9 +83,9 @@
       <div class="section-head"><h2 id="wf-h">Featured &middot; CREW-WILDFIRE</h2><div class="rule"></div><span class="section-note">2024 &ndash; present</span></div>
       <div class="feature">
         <div class="feature-body">
-          <h3 class="feature-title"><a class="stretched" href="https://crew-wildfire.com">A large-scale multi-agent system for LLM agents, from simulator to deployed product</a></h3>
-          <p class="feature-lede">Procedurally generated wildfire worlds where up to 2,000+ LLM agents and human players scout, contain fires, and rescue civilians together. Playable at <a href="https://crew-wildfire.com">crew-wildfire.com</a>.</p>
-          <p class="feature-text">I built the Unity simulator, the distributed Docker and gRPC infrastructure that scales it to thousands of agents, the benchmark of five multi-LLM agentic algorithms, and WILDFIRE-ORCH, the browser app where humans team up with ORCH agents.</p>
+          <h3 class="feature-title"><a class="stretched" href="https://crew-wildfire.com">An online large-scale multi-agent platform for benchmarking long-horizon complex agentic teams</a></h3>
+          <p class="feature-lede">Procedurally generated wildfire worlds where up to 2,000+ LLM agents and human players scout, contain fires, and rescue civilians together, while faced with limited resources, observability, and communication.</p>
+          <p class="feature-text">Benchmarks 5 state-of-the-art multi-agent orchestration algorithms with our novel ORCH (Organizational Principles Enable Collective Intelligence in Embodied AI) algorithm built in. Allows real-time human feedback to hierarchical large-scale teams.</p>
           <ul class="tags"><li class="tag">Python</li><li class="tag">AWS</li><li class="tag">vLLM</li><li class="tag">Docker</li><li class="tag">Unity</li><li class="tag">React</li><li class="tag">gRPC</li><li class="tag">WebSocket</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://crew-wildfire.com">Play at crew-wildfire.com</a>
@@ -138,8 +138,8 @@
       <div class="feature">
         <div class="feature-body">
           <h3 class="feature-title"><a class="stretched" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Online dynamic scene graphs that tell a robot where to explore next</a></h3>
-          <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot builds a 3D scene graph on the fly from streaming RGB-D and uses it to pick exploration frontiers for open-ended natural-language tasks, indoors and outdoors, with no prior map. I built the scene-graph module.</p>
-          <p class="feature-text">The graph grows online from OWLv2 open-vocabulary detections across five cameras, clustered into 3D boxes and tracked across frames, with spatial relations checked by an LLM. A task parser turns an instruction like &ldquo;find shelter from the rain&rdquo; into object queries, and an LLM frontier selector reasons over the partial graph to choose where to go next. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
+          <p class="feature-lede">Duke&rsquo;s entry to DARPA&rsquo;s TIAMAT challenge, a sim-to-real autonomy competition with a $1M prize pool. A Boston Dynamics Spot explores unknown indoor and outdoor spaces with no prior map, driven by AI agents: a vision-language foundation model perceives the scene and LLM agents decide what to do next.</p>
+          <p class="feature-text">A VLM foundation model (OWLv2) turns five camera streams into open-vocabulary detections that are clustered into 3D boxes and tracked into a live semantic scene graph, with an LLM verifying spatial relations. On top of that graph, LLM agents run the mission: a task-parser agent turns an instruction like &ldquo;find shelter from the rain&rdquo; into object queries, and a frontier-selector agent reasons over the partial graph to choose where to explore next. Developed in Habitat, MuJoCo, and Isaac Sim, then run on Spot through ROS 2.</p>
           <ul class="tags"><li class="tag">C++</li><li class="tag">ROS 2</li><li class="tag">VLMs</li><li class="tag">OWLv2</li><li class="tag">Isaac Sim</li><li class="tag">MuJoCo</li></ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="assets/TIAMAT_Scene_Graph_Exploration.pdf">Read the paper</a>
