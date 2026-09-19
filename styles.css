@@ -122,8 +122,8 @@ h1, h2, h3 { margin: 0; }
   gap: 20px;
 }
 .identity { display: flex; flex-direction: column; gap: 14px; }
-.headshot-wrap { position: relative; display: block; width: 96px; height: 96px; }
-.headshot { width: 96px; height: 96px; border-radius: 14px; object-fit: cover; }
+.headshot-wrap { position: relative; display: block; width: 108px; height: 108px; }
+.headshot { width: 108px; height: 108px; border-radius: 14px; object-fit: cover; }
 .headshot-alt { position: absolute; inset: 0; opacity: 0; transition: opacity 0.25s ease; }
 .headshot-wrap:hover .headshot-alt { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .headshot-alt { transition: none; } }
@@ -168,7 +168,7 @@ h1, h2, h3 { margin: 0; }
   padding: 52px 40px 48px 44px;
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 52px;
 }
 .section { display: flex; flex-direction: column; gap: 14px; }
 .section-head { display: flex; align-items: center; gap: 12px; }
